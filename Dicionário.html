@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+  <style>
+    #Lib {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-left: 4%;
+      margin-top: 40px;
+      color: #00c7a6;
+      width: 90%;
+      border-bottom: 3px solid #00c7a6;
+    }
+
+    .A,
+    .B,
+    .C,
+    .D,
+    .E,
+    .F,
+    .G,
+    .H,
+    .I,
+    .J,
+    .K,
+    .L,
+    .M,
+    .N,
+    .O,
+    .P,
+    .Q,
+    .R,
+    .S,
+    .T,
+    .U,
+    .V,
+    .W,
+    .X,
+    .Y,
+    .Z,
+    .TD {
+
+      margin-right: 1px;
+      background: none;
+      border: 2px solid color #00c7a6;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 150%;
+      transition: 0.25s all;
+      border-radius: 8px;
+      border-color: #00c7a6;
+      border-style: double;
+      color: black;
+      background-color: #00c7a6;
+      height: 40px;
+    }
+
+    #textb {
+      margin-left: 4%;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.3rem;
+      color: white;
+    }
+
+    .letras {
+      display: block;
+      max-width: 88.6vw;
+      max-height: 100%;
+      margin-bottom: 5px;
+      margin-left: 4%;
+      margin-right: 4%;
+      overflow-x: scroll;
+
+    }
+
+    .container::before,
+    .container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 20px;
+      pointer-events: none;
+    }
+
+    .letras::before {
+      left: 0;
+      background: linear-gradient(to right, #00c7a6, rgba(255, 255, 255, 0));
+    }
+
+    .letras::after {
+      right: 0;
+      background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+
+    .letras::-webkit-scrollbar {
+      width: 10px;
+      /* Largura da barra de rolagem */
+      height: 10px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .letras::-webkit-scrollbar-thumb {
+      background-color: #ffffff;
+      /* Cor do "polegar" da barra de rolagem */
+      border-radius: 10px;
+      /* Bordas arredondadas */
+      margin-top: 10px;
+    }
+
+    .letras::-webkit-scrollbar-track {
+      margin-top: 10px;
+    }
+
+
+    .A:hover,
+    .B:hover,
+    .C:hover,
+    .D:hover,
+    .E:hover,
+    .F:hover,
+    .G:hover,
+    .H:hover,
+    .I:hover,
+    .J:hover,
+    .K:hover,
+    .L:hover,
+    .M:hover,
+    .N:hover,
+    .O:hover,
+    .P:hover,
+    .Q:hover,
+    .R:hover,
+    .S:hover,
+    .T:hover,
+    .U:hover,
+    .V:hover,
+    .W:hover,
+    .X:hover,
+    .Y:hover,
+    .Z:hover {
+      box-shadow: 0px 0px 1px #00c7a6;
+      transition: 0.25s all;
+      margin-top: -4px;
+      height: 40px;
+      width: 90%.001;
+    }
+
+    .TD:hover {
+      box-shadow: 0px 0px 10px #00c7a6;
+      transition: 0.25s all;
+      margin-top: -4px;
+      height: 40px;
+    }
+
+    .A:active,
+    .B:active,
+    .C:active,
+    .D:active,
+    .E:active,
+    .F:active,
+    .G:active,
+    .H:active,
+    .I:active,
+    .J:active,
+    .K:active,
+    .L:active,
+    .M:active,
+    .N:active,
+    .O:active,
+    .P:active,
+    .Q:active,
+    .R:active,
+    .S:active,
+    .T:active,
+    .U:active,
+    .V:active,
+    .W:active,
+    .X:active,
+    .Y:active,
+    .Z:active,
+    .TD:active {
+      border-color: #17e2c0;
+      background-color: #17e2c0;
+      margin-top: -4px;
+    }
+
+    .inTopc {
+      margin-left: 4.1%;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: brown;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 1%;
+      text-decoration: none;
+    }
+
+    #bioq,
+    #base,
+    #brmt,
+    #atomo,
+    #amacid,
+    #alcl {
+      transition: 0.5s;
+      color: white;
+      width: 10px;
+    }
+
+    #bioq:hover,
+    #base:hover,
+    #brmt:hover,
+    #atomo:hover,
+    #amacid:hover,
+    #alcl:hover {
+      transition: 0.5s;
+      color: white;
+    }
+
+    .infor {
+      margin-top: -1100px;
+      background-color: rgb(255, 255, 255);
+      width: 80.00000001%;
+      height: 1045px;
+      border: 2px solid;
+      border-radius: 10px;
+
+    }
+
+    #libr {
+      cursor: default;
+
+    }
+
+    #menu:hover {
+      color: rgb(56, 56, 56);
+      cursor: pointer;
+    }
+
+    #menu {
+      color: rgb(104, 103, 103);
+      cursor: pointer;
+      transition: 0.3s all;
+    }
+
+    .barInf {
+      background-color: white;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 1.2rem;
+      height: 20%;
+      padding-top: 4.5%;
+
+    }
+
+    .txtbarInfo {
+      padding-left: 6%;
+    }
+
+    .none {
+      display: none;
+      transition: 1s all;
+      opacity: 0;
+    }
+
+    .block {
+      display: block;
+      transition: 1s all;
+      opacity: 1;
+    }
+
+    .titl {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.7rem;
+    }
+
+    .alfbt,
+    #alfbt2 {
+      margin-left: 4.1%;
+      margin-right: 4.1%;
+      display: flex;
+    }
+
+    #alfbt2 {
+      margin-top: 20px;
+    }
+
+    .txt,
+    .txA,
+    .txtB,
+    .txtC,
+    .txtD,
+    .txtE,
+    .txtF {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      padding: 7px;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: 0.25s all;
+      display: block;
+      width: 10.8%;
+    }
+
+    .txA:hover,
+    .txtB:hover,
+    .txtC:hover {
+      transition: 0.25s all;
+      font-size: 1.9rem;
+    }
+
+    #tA,
+    #tB, #tC, #tD, #tE, #tF {
+      background-color: #00c7a6;
+      background-size: 10px;
+      color: black;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      width: 88.6vw;
+      margin-right: 4%;
+      padding-left: 7px;
+      display: block;
+    }
+
+    .pesqapc{
+      display: block;
+      position: sticky;
+     }
+
+     #bRes{
+    background-color: rgb(255, 255, 255);
+    height: 5rem;
+    display: block;
+    padding-top: 1.2rem;
+ }
+ @media (min-width: 991px){
+    #bRes{
+        display: none;
+    }
+ }
+ body{
+  background-color: #0d183a;
+ }
+
+  </style>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+
+
+<style src="index.js"></style>
+<nav class="navbar navbar-expand-lg bg-body-tertiary navig JH">
+  <div class="container-fluid" id="JH">
+    <a class="navbar-brand" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      Terminologia Química </a>
+    
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" id="menu" aria-current="page" href="index.html"> Menu </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="libr" style="color: rgb(51, 51, 51); cursor: default;"> Dicionário </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="tabel-periodica.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tabela Periódica
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true"> Desabilitado </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search"> 
+        <input class="form-control me-2" type="search" id="Pesquisa" placeholder="Digite Algo Aqui..." aria-label="Digite Algo Aqui...">
+        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div id="bRes" >
+  <center>
+  <table>
+    <tr>
+      <div>
+      <button style="background: none; border: none;">  Menu </button>
+      <button style="background: none; border: none;"> <a href="Dicionário.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Dicionário </a></button>
+      <button style="background: none; border: none;"> <a href="tabel-periodica.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Tabela Periódica </a> </button>
+      <form class="d-flex" role="search">
+        <input class="me-2" type="search" id="Pesquisa2" placeholder="Digite Algo Aqui..." aria-label="Digite Algo Aqui..." style="border-radius: 4px; border-color: rgb(47, 168, 47); border: 0.01rem solid rgb(0, 128, 102); height: 1.9rem;">
+        <button class="btn btn-outline-success" type="submit" style="height: 1.87rem; padding-top: 0.1rem; margin-bottom: 5px;">Pesquisar</button>
+      </form>
+    </div>
+    </tr>
+  </table>
+</center>
+</div>
+
+<body id="body">
+  <h2 id="Lib"> Dicionário </h2>
+  <p id="textb"> Aqui você encontrará todas as terminologias químicas e o que cada uma signifíca.</p>
+  <table class="letras">
+    <tr>
+      <td>
+      <td><button class="A" onclick="showContentA()"> A </button></td>
+      <td><button class="B" onclick="showContentB()"> B </button></td>
+      <td><button class="C" onclick="showContentC()"> C </button></td>
+      <td><button class="D" onclick="showContentD()"> D </button></td>
+      <td><button class="E" onclick="showContentE()"> E </button></td>
+      <td><button class="F" onclick="showContentF()"> F </button></td>
+      <td><button class="G" onclick="showContentG()"> G </button></td>
+      <td><button class="H" onclick="showContentH()"> H </button></td>
+      <td><button class="I" onclick="showContentI()"> I </button></td>
+      <td><button class="J" onclick="showContentJ()"> J </button></td>
+      <td><button class="K" onclick="showContentK()"> K </button></td>
+      <td><button class="L" onclick="showContentL()"> L </button></td>
+      <td><button class="M" onclick="showContentM()"> M </button></td>
+      <td><button class="N" onclick="showContentN()"> N </button></td>
+      <td><button class="O" onclick="showContentO()"> O </button></td>
+      <td><button class="P" onclick="showContentP()"> P </button></td>
+      <td><button class="Q" onclick="showContentQ()"> Q </button></td>
+      <td><button class="R" onclick="showContentR()"> R </button></td>
+      <td><button class="S" onclick="showContentS()"> S </button></td>
+      <td><button class="T" onclick="showContentT()"> T </button></td>
+      <td><button class="U" onclick="showContentU()"> U </button></td>
+      <td><button class="V" onclick="showContentV()"> V </button></td>
+      <td><button class="W" onclick="showContentW()"> W </button></td>
+      <td><button class="X" onclick="showContentX()"> X </button></td>
+      <td><button class="Y" onclick="showContentY()"> Y </button></td>
+      <td><button class="Z" onclick="showContentZ()"> Z </button></td>
+      <td><button class="TD" onclick="showContentTD()"> TODOS </button></td>
+      <br>
+      </td>
+    </tr>
+    </div>
+  </table>
+  <br><br>
+  <table class="alfbt">
+    <tr>
+      <th class="titl" id="tA"> A </th>
+
+    </tr>
+    <tr>
+        <td class="content" id="txtpartA" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; ">
+          <a class="txA" href="Atomo.html" id="atm">Átomo</a>
+          <a class="txA" id="atm">Átomo</a>
+          <a class="txA" id="atm">Átomo</a>
+        </td>
+    </tr>
+    <!-- Linhas de Espaço -->
+    <tr class="space">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tr>
+    <!-- Fim das Linhas -->
+    <tr>
+      <th class="titl" id="tB"> B </th>
+    </tr>
+    <tr>
+      <td class="content" id="txtpartB" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+        <a class="txtB" href="Base.html" id="bse">Base</a>
+        <a class="txtB" id="bario">Bário</a>
+        <a class="txtB" id="bario">Bário</a>
+      </td>
+    </tr>
+    <tr>
+      <!-- Linhas de Espaço -->
+    <tr class="space">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tr>
+    <!-- Fim das Linhas -->
+    <tr>
+      <th class="titl" id="tC"> C </th>
+    </tr>
+    <td class="content" id="txtpartC" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+      <a class="txtC" href="Cátodo.html" id="catod">Cátodo</a>
+      <a class="txtC" id="carb">Carbono</a>
+      <a class="txtC" id="carb">Carbono</a>
+    </td>
+      <!-- Linhas de Espaço -->
+      <tr class="space">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tr>
+      <!-- Fim das Linhas -->
+      <tr>
+        
+        <th class="titl" id="tD"> D </th>
+      </tr>
+      <tr>
+        <td class="content" id="txtpartD" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+          <a class="txtD" href="Destilação.html" id="dest"> Destilação </a>
+          <a class="txtD" id="diox">Dióxido</a>
+          <a class="txtD" id="diox">Dióxido</a>
+        </td> 
+      </tr>
+    
+      
+      <!-- <td class="content">
+        <a class="txtE" id="enx">Enxofre</a><br>
+        <a class="txtE" id="enx">Enxofre</a><br>
+        <a class="txtE" id="enx">Enxofre</a><br>
+      </td>
+      <td class="content">
+        <a class="txtF" id="fosf">Fósforo</a><br>
+        <a class="txtF" id="fosf">Fósforo</a><br>
+        <a class="txtF" id="fosf">Fósforo</a><br>
+      </td> -->
+    </tr>
+  </table> 
+  <!-- <table id="alfbt2">
+    <td>
+      <tr style="margin-top: 40px;">
+
+        <th class="titl" id="tE"> E </th>
+        <th class="titl" id="tF"> F </th>
+        <th class="titl" id="tG"> G </th>
+        <th class="titl" id="tH"> H </th>
+        <th class="titl" id="tI"> I </th>
+        <th class="titl" id="tJ"> J </th>
+        <th class="titl" id="tK"> K </th>
+        <th class="titl" id="tL"> L </th>
+        <th class="titl" id="tM"> M </th>
+        <th class="titl" id="tN"> N </th>
+        <th class="titl" id="tO"> O </th>
+        <th class="titl" id="tP"> P </th>
+        <th class="titl" id="tQ"> Q </th>
+        <th class="titl" id="tR"> R </th>
+        <th class="titl" id="tS"> S </th>
+        <th class="titl" id="tT"> T </th>
+        <th class="titl" id="tU"> U </th>
+        <th class="titl" id="tV"> V </th>
+        <th class="titl" id="tW"> W </th>
+        <th class="titl" id="tX"> X </th>
+        <th class="titl" id="tY"> Y </th>
+        <th class="titl" id="tZ"> Z </th>
+      </tr>
+    </td>
+  </table> -->
+
+
+
+
+
+  </div>
+  <br><br><br><br><br>
+  <br><br><br><br><br>
+  <br><br><br><br><br>
+
+
+  <nav class="barInf">
+    <p class="txtbarInfo"> Este site foi feito por alunos da <b> Etec Elias Nechar, </b> <br> Mas
+      Alguns textos foram feitos por IA, e outros foram tirados de sites como <a
+        href="https://mundoeducacao.uol.com.br/"> Mundo Educação </a> e <a href="https://www.todamateria.com.br/"> Toda
+        Matéria </a> <br> <br>
+      Viu algo com erro? Entre em contato. <br>
+      heitor.cangussu@etec.sp.gov.br <br> joao.almeida332@etec.sp.gov.br </p>
+    <img src="Img/Eteclogo-Photoroom.png" style="float: right; margin-top: -224px; margin-right: 6%;"> <br>
+
+
+  </nav>
+  
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+</body>
+<script src="JS/indexjs.js">
+
+
+</script>
+
+</html>
