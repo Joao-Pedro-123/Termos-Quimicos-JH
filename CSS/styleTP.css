@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-  
+body {
+
     background-color: rgb(29, 28, 28);
     color: white;
 }
 
-header>h1{
+header>h1 {
     margin: 50px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -20,7 +20,7 @@ header>h1{
     text-align: center;
 }
 
-th#txtTh{
+th#txtTh {
     position: absolute;
     background-color: #e7e6e6;
     text-align: left;
@@ -33,7 +33,7 @@ th#txtTh{
     border-radius: 5px 5px 0px 0px;
 }
 
-#txt{ 
+#txt {
     display: flex;
     position: absolute;
     background-color: #e7e6e6;
@@ -50,7 +50,7 @@ th#txtTh{
     border: none;
 }
 
-div#icone{
+div#icone {
     position: relative;
     background-color: blueviolet;
     width: 100px;
@@ -65,17 +65,17 @@ div#icone{
     font-weight: 500;
 }
 
-p#indice{
+p#indice {
     font-size: 18px;
 }
 
-span#informativo{
+span#informativo {
     width: 400px;
-    margin-left:16px;
+    margin-left: 16px;
     font-size: 14px;
 }
 
-table#principal{
+table#principal {
     position: relative;
     background-color: rgba(255, 255, 255, 0.295);
     color: rgba(0, 0, 0, 0.726);
@@ -87,7 +87,7 @@ table#principal{
     border-radius: 5px;
 }
 
-p{
+p {
     position: absolute;
     font-size: 10px;
     font-weight: 100;
@@ -95,12 +95,12 @@ p{
     top: 3px;
 }
 
-td{
+td {
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
     font-size: 20px;
     position: relative;
-    display:inline-block;
+    display: inline-block;
     text-align: center;
     border: none;
     border-radius: 2px;
@@ -111,13 +111,13 @@ td{
     margin-top: 2px;
 }
 
-td:hover{
+td:hover {
     cursor: pointer;
     animation: tada;
     animation-duration: 2s;
 }
 
-section#legenda{
+section#legenda {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -130,7 +130,7 @@ section#legenda{
     border-radius: 5px;
 }
 
-div.quadrado{
+div.quadrado {
     width: 25px;
     height: 25px;
     margin: 15px;
@@ -140,7 +140,7 @@ div.quadrado{
     border-radius: 5px;
 }
 
-label{
+label {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -150,13 +150,13 @@ label{
     letter-spacing: 1px;
 }
 
-footer{
+footer {
     margin-top: 160px;
     width: 100%;
     text-align: center;
 }
 
-.outros{
+.outros {
     color: white;
     font-size: 10px;
     padding: 4px;
@@ -164,20 +164,38 @@ footer{
     border: none;
 }
 
-.oculto{
+.oculto {
     visibility: hidden;
 }
 
-.invisivel{
+.invisivel {
     display: none;
 }
 
-.animacao{
-    animation:tada;
+.animacao {
+    animation: tada;
     animation-duration: 2s;
 }
 
-.animacaoLegenda{
-    animation:heartBeat;
+.animacaoLegenda {
+    animation: heartBeat;
     animation-duration: 3s;
 }
+
+.navTP {
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    width: 100%;
+    background: white;
+    height: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 1rem;
+    display: flex;
+}
+#TMQ{
+    margin-right: 0.5rem;
+}
+
