@@ -61,6 +61,16 @@
       height: 40px;
     }
 
+    .content { /* Usar flexbox para layout flexível */
+    justify-content: center; /* Centralizar os links horizontalmente */
+    align-items: center; /* Centralizar os links verticalmente */
+    gap: 1rem; /* Espaçamento entre os links */
+}
+.links-container {
+    display: flex; /* Usar flexbox para alinhar links horizontalmente */
+    gap: 1rem; /* Espaçamento entre os links */
+}
+
     #textb {
       margin-left: 4%;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -284,10 +294,10 @@
       margin-left: 4.1%;
       margin-right: 4.1%;
       display: flex;
-    }
-
-    #alfbt2 {
-      margin-top: 20px;
+      border-spacing: 2rem;
+      gap: 2rem;
+      max-width: 990px;
+      flex-wrap: auto;
     }
 
     .txt,
@@ -315,7 +325,11 @@
     }
 
     #tA,
-    #tB, #tC, #tD, #tE, #tF {
+    #tB,
+    #tC,
+    #tD,
+    #tE,
+    #tF {
       background-color: #00c7a6;
       background-size: 10px;
       color: black;
@@ -327,26 +341,32 @@
       display: block;
     }
 
-    .pesqapc{
+    .pesqapc {
       display: block;
       position: sticky;
-     }
-
-     #bRes{
-    background-color: rgb(255, 255, 255);
-    height: 5rem;
-    display: block;
-    padding-top: 1.2rem;
- }
- @media (min-width: 991px){
-    #bRes{
-        display: none;
     }
- }
- body{
-  background-color: #0d183a;
- }
 
+    #bRes {
+      background-color: rgb(255, 255, 255);
+      height: 5rem;
+      display: block;
+      padding-top: 1.2rem;
+    }
+
+    @media (min-width: 991px) {
+      #bRes {
+        display: none;
+      }
+    }
+
+    body {
+      background-color: #0d183a;
+    }
+
+    #espA, #espB, #espC, #espC{
+      visibility: hidden;
+      font-size: 0.4rem;
+    }
   </style>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -358,7 +378,7 @@
   <div class="container-fluid" id="JH">
     <a class="navbar-brand" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
       Terminologia Química </a>
-    
+
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
@@ -385,31 +405,38 @@
           <a class="nav-link disabled" aria-disabled="true"> Desabilitado </a>
         </li>
       </ul>
-      <form class="d-flex" role="search"> 
-        <input class="form-control me-2" type="search" id="Pesquisa" placeholder="Digite Algo Aqui..." aria-label="Digite Algo Aqui...">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" id="Pesquisa" placeholder="Digite Algo Aqui..."
+          aria-label="Digite Algo Aqui...">
         <button class="btn btn-outline-success" type="submit">Pesquisar</button>
       </form>
     </div>
   </div>
 </nav>
-<div id="bRes" >
+<div id="bRes">
   <center>
-  <table>
-    <tr>
-      <div>
-      <button style="background: none; border: none;">  Menu </button>
-      <button style="background: none; border: none;"> <a href="Dicionário.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Dicionário </a></button>
-      <button style="background: none; border: none;"> <a href="tabel-periodica.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Tabela Periódica </a> </button>
-      <form class="d-flex" role="search">
-        <input class="me-2" type="search" id="Pesquisa2" placeholder="Digite Algo Aqui..." aria-label="Digite Algo Aqui..." style="border-radius: 4px; border-color: rgb(47, 168, 47); border: 0.01rem solid rgb(0, 128, 102); height: 1.9rem;">
-        <button class="btn btn-outline-success" type="submit" style="height: 1.87rem; padding-top: 0.1rem; margin-bottom: 5px;">Pesquisar</button>
-      </form>
-    </div>
-    </tr>
-  </table>
-</center>
+    <table>
+      <tr>
+        <div style="margin-right: -0.5rem;">
+          <a style="background: none; border: none; text-decoration: none; color: rgb(151, 151, 151); margin-right: 0.4rem;" href="index.html"> Menu </a>
+          <button style="background: none; border: none;"> <a href="Dicionário.html"
+              style="text-decoration: none; color: rgb(54, 54, 54);"> Dicionário </a></button>
+          <button style="background: none; border: none;"> <a href="tabel-periodica.html"
+              style="text-decoration: none; color: rgb(151, 151, 151);"> Tabela Periódica </a> </button>
+          <form class="d-flex" role="search">
+            <input class="me-2" type="search" id="Pesquisa2" placeholder="Digite Algo Aqui..."
+              aria-label="Digite Algo Aqui..."
+              style="border-radius: 4px; border-color: rgb(47, 168, 47); border: 0.01rem solid rgb(0, 128, 102); height: 1.9rem;">
+            <button class="btn btn-outline-success" type="submit"
+              style="height: 1.87rem; padding-top: 0.1rem; margin-bottom: 5px;">Pesquisar</button>
+          </form>
+        </div>
+      </tr>
+    </table>
+  </center>
 </div>
 
+</th>
 <body id="body">
   <h2 id="Lib"> Dicionário </h2>
   <p id="textb"> Aqui você encontrará todas as terminologias químicas e o que cada uma signifíca.</p>
@@ -450,302 +477,63 @@
   </table>
   <br><br>
   <table class="alfbt">
-    <tr>
-      <th class="titl" id="tA"> A </th>
 
+    <tr style="display: flex;">
+
+      <td class="content" id="txtpartA" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tA"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          A </a> 
+          <div class="links-container"></div>
+        <a class="txA" href="Atomo.html" id="atm">Átomo</a> <a class="txA" id="atm"> Absorbância  </a>
+        
+        <a class="txA" id="atm">Átomo</a>
+      </div>
+      </td>
     </tr>
-    <tr>
-        <td class="content" id="txtpartA" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; ">
-          <a class="txA" href="Atomo.html" id="atm">Átomo</a>
-          <a class="txA" id="atm">Átomo</a>
-          <a class="txA" id="atm">Átomo</a>
-        </td>
-    </tr>
-    <!-- Linhas de Espaço -->
-    <tr class="space">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tr>
-    <!-- Fim das Linhas -->
-    <tr>
-      <th class="titl" id="tB"> B </th>
-    </tr>
-    <tr>
-      <td class="content" id="txtpartB" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+
+    <tr id="espA"><td>A</td></tr>
+    
+    <tr style="display: inline;">
+      <td class="content" id="txtpartB" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tB"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          B </a>
         <a class="txtB" href="Base.html" id="bse">Base</a>
         <a class="txtB" id="bario">Bário</a>
         <a class="txtB" id="bario">Bário</a>
       </td>
     </tr>
-    <tr>
-      <!-- Linhas de Espaço -->
-    <tr class="space">
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tr>
-    <!-- Fim das Linhas -->
-    <tr>
-      <th class="titl" id="tC"> C </th>
-    </tr>
-    <td class="content" id="txtpartC" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
-      <a class="txtC" href="Cátodo.html" id="catod">Cátodo</a>
-      <a class="txtC" id="carb">Carbono</a>
-      <a class="txtC" id="carb">Carbono</a>
-    </td>
-      <!-- Linhas de Espaço -->
-      <tr class="space">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tr>
-      <!-- Fim das Linhas -->
-      <tr>
-        
-        <th class="titl" id="tD"> D </th>
-      </tr>
-      <tr>
-        <td class="content" id="txtpartD" style="background-color: white; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
-          <a class="txtD" href="Destilação.html" id="dest"> Destilação </a>
-          <a class="txtD" id="diox">Dióxido</a>
-          <a class="txtD" id="diox">Dióxido</a>
-        </td> 
-      </tr>
-    
+
+    <tr id="espB"><td>B</td></tr>
+
+    <tr style="display: inline;">
+      <td class="content" id="txtpartC" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tC"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          C </a>
+        <a class="txtC" href="Cátodo.html" id="carb">Cátodo</a>
+        <a class="txtC" id="carb">Carbono</a>
+        <a class="txtC" id="carb">Carbono</a>
+
+      </td>
       
-      <!-- <td class="content">
+    </tr>
+    <tr id="espC"><td>C</td></tr>
+    <tr>
+      <td class="content" id="txtpartD" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tD"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          D </a>
+        <a class="txtD" href="Destilação.html" id="dest"> Destilação </a>
+        <a class="txtD" id="diox">Dióxido</a>
+        <a class="txtD" id="diox">Dióxido</a>
+      </td>
+    </tr>
+
+    <tr id="espD"><td>D</td></tr>
+
+    <!-- <td class="content">
         <a class="txtE" id="enx">Enxofre</a><br>
         <a class="txtE" id="enx">Enxofre</a><br>
         <a class="txtE" id="enx">Enxofre</a><br>
@@ -755,8 +543,8 @@
         <a class="txtF" id="fosf">Fósforo</a><br>
         <a class="txtF" id="fosf">Fósforo</a><br>
       </td> -->
-    </tr>
-  </table> 
+    
+  </table>
   <!-- <table id="alfbt2">
     <td>
       <tr style="margin-top: 40px;">
@@ -792,9 +580,8 @@
 
 
   </div>
-  <br><br><br><br><br>
-  <br><br><br><br><br>
-  <br><br><br><br><br>
+ 
+  <br><br>
 
 
   <nav class="barInf">
@@ -808,7 +595,7 @@
 
 
   </nav>
-  
+
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
