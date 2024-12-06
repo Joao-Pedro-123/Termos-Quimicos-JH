@@ -46,62 +46,89 @@
             margin-left: 4.3%;
             margin-top: 10px;
         }
-        .barInf{
-          background-color: white;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          font-size: 1.2rem;
-          height: 20%;
-          padding-top: 4.5%;
-          
-        }
-        .txtbarInfo{
-          padding-left: 6%;
-        }
+        .barInf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    flex-wrap: wrap; /* Permitir que os itens se movam para a próxima linha */
+}
+
+.txtbarInfo {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    flex: 1; /* Permitir que o texto ocupe o espaço disponível */
+}
+
+.barInf img {
+    max-width: 150px; /* Ajustar o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-left: 1rem;
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+    .barInf {
+        flex-direction: column; /* Mudar direção dos itens para coluna */
+        align-items: flex-start; /* Alinhar itens ao início */
+    }
+
+    .barInf img {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
         #body{
           background-color: #0d183a;
         }
-        
+
+        .navTP {
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    width: 100%;
+    background: white;
+    height: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 1rem;
+    display: flex;
+}
+
+@media (max-width: 1000px) {
+    .navTP {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem; /* Definir a largura como 100% da viewport */
+    }
+    .nav-title {
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        justify-content: flex-end;
+    }
+}
+
         
     </style>
 </head>
 <body id="body">
 
 </html><style src="index.js"></style>
-<nav class="navbar navbar-expand-lg bg-body-tertiary navig">
-  <div class="container-fluid" >
-    <a class="navbar-brand" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Terminologia  Química </a>
-    <button class="navbar-toggler" id="btnn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" id="menu" aria-current="page" href="index.html"> Menu </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="libr" style="color: rgb(51, 51, 51); cursor: default;" href="Dicionário.html"> Dicionário </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="tabel-periodica.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Tabela Periódica
-          </a> 
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
-        </li>
-      </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-    </div>
-  </div>
+<nav class="navTP" >
+  <a id="TMQ"> Terminologia  Química </a> 
+  <a href="index.html" class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Menu </a>
+  <a href="Dicionário.html" class="txts" id="tBP" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Dicionário </a>
+  <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(70, 70, 70);"> Tabela Periódica </a>
+  
+  <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(216, 216, 216);"> Desabilitado </a>
+  
 </nav>
 
 <h2 id="BIOq"> Cátodo </h2> 
@@ -130,7 +157,7 @@
       alguns textos foram retirados de IA, e outros foram de sites como <a href="https://pgquim.ufc.br/wp-content/uploads/2021/07/dissertaCAo-regis-lopes-melo-2009.pdf"> Universidade Federal do Ceára. </a> <br> <br> 
       Viu algo com erro? Entre em contato. <br>
     heitor.cangussu@etec.sp.gov.br <br>  joao.almeida332@etec.sp.gov.br </p>
-    <img src="Img/Eteclogo-Photoroom.png" style="float: right; margin-top: -224px; margin-right: 6%;"> <br>
+    <img src="Img/Eteclogo-Photoroom.png"> <br>
     
     </nav>
     <div vw class="enabled">
