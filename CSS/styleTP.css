@@ -195,6 +195,26 @@ footer {
     gap: 1rem;
     display: flex;
 }
+
+@media (max-width: 1000px) {
+    .navTP {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem;
+        width: 154.2vw; /* Definir a largura como 100% da viewport */
+    }
+    .nav-title {
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        justify-content: flex-end;
+    }
+}
+
+
+
 #TMQ{
     margin-right: 0.5rem;
 }
