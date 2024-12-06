@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
     <style>
-    #catodo{
+    #Lib{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         margin-left: 4%;
         margin-right: 4%;
@@ -32,7 +33,7 @@
             font-size: 1.1rem;
             color: white;
         }
-        #cttp{
+        #Atp{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         margin-right: 4%;
         margin-left: 4%;
@@ -43,7 +44,7 @@
         }
 
         #EstAtomo{
-            margin-left: 4.3%;
+            margin-left: 20px;
             margin-top: 10px;
         }
         .barInf{
@@ -60,117 +61,142 @@
         #body{
           background-color: #0d183a;
         }
+        .navTP {
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    width: 100%;
+    background: white;
+    height: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 1rem;
+    display: flex;
+}
+
+@media (max-width: 1000px) {
+    .navTP {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem;
+        width: 154.2vw; /* Definir a largura como 100% da viewport */
+    }
+    .nav-title {
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        justify-content: flex-end;
+    }
+}
+
+
         
         
     </style>
-    
 </head>
 <body id="body">
 
 </html><style src="index.js"></style>
-<nav class="navbar navbar-expand-lg bg-body-tertiary navig">
-  <div class="container-fluid" >
-    <a class="navbar-brand" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Terminologia  Química </a>
-    <button class="navbar-toggler" id="btnn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" id="menu" aria-current="page" href="index.html"> Menu </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="libr" style="color: rgb(51, 51, 51); cursor: default;" href="Dicionário.html"> Dicionário </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="tabel-periodica.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Tabela Periódica
-          </a> 
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
-        </li>
-      </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
-    </div>
-  </div>
+<nav class="navTP" >
+  <a id="TMQ"> Terminologia  Química </a> 
+  <a href="index.html" class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Menu </a>
+  <a href="Dicionário.html" class="txts" id="tBP" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Dicionário </a>
+  <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(70, 70, 70);"> Tabela Periódica </a>
+  
+  <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(216, 216, 216);"> Desabilitado </a>
+  
 </nav>
 
-<h2 id="catodo"> Base </h2>        
-    <p class="Expl"> A base é uma das coisas mais importantes para a química. </p>
-    <p id="cttp"> O que são bases?  </p> 
-    <p class="Expl"> Definir o que são bases não é tão fácil, existem várias teorias sobre o que é uma base.  Atualmente entende-se que base não é uma classe específica mas sim um comportamento químico. As bases são substâncias que conseguem aumentar a quantidade de ânions hidróxido, OH-, em solução. <br> Essa definição é baseada na teoria da dissiociação eletrolítica, desenvolvida pelo químico sueco Svant Arrhenius no ano de 1887, Arrhenius foi terceiro a receber o Prêmio Nobel de Química na história em 1903. Mas sua teoria se limita a soluções aquosas, e definições mais modernas, como a teoria eletrônica de Gilbert Newton Lewis, que descartam a típica relação entre base e íons hidroxila. Na teoria de Lewis, base é uma espécie que, em uma reação química, doa um par de elétrons, independentemente se for aquoso ou não.  </p>
-    <img src="Img/base de arhenius.jfif" id="EstAtomo">
-    <p id="cttp"> Características </p>
+<h2 id="Lib"> Átomo </h2> 
+    <p class="Expl"> O átomo é a partícula fundamental que compõe a matéria. </p>
+    <p id="Atp"> Introdução aos Átomos   </p>
+    <p class="Expl"> Átomo é a partícula que constitui a matéria, sendo assim, tudo que tem massa e volume é constituído por átomos. <br> 
+      O nome átomo vem do grego "A" (não) e "tomos" (divisão). Este nome foi dado por Demócrito, pois naquele tempo, acreditava-se que o átomo não era divisível, mas não é bem assim. Você verá mais pra fente a história do átomo, mas agora vamos ver sua estrutura.
+    </p>
+    <p id="Atp"> Estrutura </p>
+    <p class="Expl"> O átomo é constituído por 1 núcleo e uma eletrosfera. No núcleo estão os prótons e os neutrons, e na eletrosfera estão os elétrons. <br>
+      Os prótons tem carga positiva, os neutrons, como o nome indica, são nêutrons. Eles estão localizados no núcleo do átomo, e são menores que ele. E agora os elétrons, que possuem carga negativa e estão localizados na eletrosfera. Veja a representação na imagem abaixo. </p>
 
-    <p class="Expl"> <ul class="Expl" style="margin-left: 3.2%;"> <li> Soluções alcalinas são condutoras de eletricidade. </li>
-      <li> Bases são formadas por um cátion metálico ligado ionicamente a uma hidroxila (OH-), com exceção do hidróxido de amônia (NH4OH). </li>
-      <li> A solubilidade das bases varia conforme o elemento formador: nitrogênio e metais alcalinos formam bases solúveis, metais alcalinos terrosos, com exceção do magnésio, formam bases pouco solúveis, e os metais de transição formam bases insolúveis. </li>
-    </ul> 
-</p>
+    <img src="Img/EstruturaDoAtomo-Photoroom.png" id="EstAtomo">
 
+    <p id="Atp"> Estrutura da Eletrosfera </p>
+
+    <p class="Expl"> A estrutura da eletrosfera é composta por camadas que são nomeadas com letras do alfabeto, e cada uma tem uma capacidade máxima de elétrons.</p>
     
+    
+    <p class="Expl"> K: até 2 elétrons <br>
+        L: até 8 elétrons <br>
+        M: até 18 elétrons <br>
+        N: até 32 elétrons <br>
+        O: até 50 elétrons <br>
+        P: até 72 elétrons <br>
+        Q: até 98 elétrons </p>
 
-    <p id="cttp"> Classificação </p>
-
-    <p class="Expl"> As bases podem ser classficadas cde acordo com o número de hidroxilas (OH-) que contem na molécula:</p>
-    <ul class="Expl" style="margin-left: 3%;">
-      <li> Monobases: 1 hidroxila (OH-) </li>
-      <li> Dibases: 2 hidroxilas (OH-) </li>
-      <li> Tribases: 3 hidroxilas (OH-) </li>
-      <li> Tetrabases: 4 hidroxilas (OH-) </li>   
-    </ul>
-    <p class="Expl"> Outro ponto importante para a classificação, é o grau de dissociação. </p>
+    <p id="Atp"> Identificação dos Átomos </p>
+    <p class="Expl"> Os átomos são muito pequenos para serem vistos com nossos olho. Então para podermos identificá-lo, nos devemos observar qual é seu número atômico(Z). E isso é fácil, apenas observe o número de prótons, a quantidade que houver, é o número atômico. Por exemplo, o oxigênio tem 8 prótons, sendo assim, o número atômico dele é 8. </p> 
+    <p id="Atp"> Fórmulas Matemáticas</p>
+    <p class="Expl"> Para calcular seu número de massa, usamos a seguite conta: </p>
+    <p class="Expl" style="font-family: 'Courier New', Courier, monospace; font-size: 20px;"> <b> A = n + p </b> </p>
+    <p class="Expl" style="border-bottom: 2px solid;"> Nesta conta, "A" é número de massa, "n" é nêutron e "p" é próton. </p>
     <br>
-    <p class="Expl"><b> Base Forte:</b> Uma Base forte é uma substância que se dissocia completamente em água, liberando íons hidróxido (OH⁻) e cátions. Isso significa que, quando uma base forte é dissolvida em água, ela se separa totalmente em seus íons constituintes, aumentando significativamente a concentração de íons OH⁻ na solução. As bases fortes são formadas por elementos da família IA e IIA, com exceção do berílio (Be) e o magnésio (Mg). </p>
-    <p class="Expl"><b> Base Fraca:</b>  é aquela não dissocia tanto quando está em meio aquoso. As bases fracas são formadas pelos metais de transição e o nitrogênio (N), que forma o hidróxido de amônio. </p>
+    <p class="Expl"> Para calcular o número de prótons, usamos outra conta:</p>
+    <p class="Expl" style="font-family: 'Courier New', Courier, monospace; font-size: 20px;  border-bottom: 2px solid;"> <b> P = A - n </b> </p> <br>
 
-    
-    <p id="cttp"> Nomes das bases </p>
-    <p class="Expl"> Para bases monovalentes, bases que seu elemento central tem apenas um número de oxidação, a composição do nome será: <b> Hidróxido de + Nome do Elemento</b></p>
-    <p class="Expl"> Temos com exemplo o Hidróxido de alumínio = Al(OH)3, e o de para AgOH</p> <br>
-    <p class="Expl"> Em alguns casos quando o metal tem carga variável, logo no final, indicam-se em números romanos a carga do cátion. Também pode se usar os sufixos -ico para carga maior e -oso, para carga menor. Veja abaixo sua estrutura:</p>
-    <p class="Expl"> Hidróido + elemento + nº da carga  ou sufixo respectivo a carga (&uarr;;-ico, -oso&darr;)</p>
-    <p id="cttp"> Principais Bases </p>
-    
-    <ul class="Expl" style="margin-left: 3%;">
-      <li> NaOh: Hidróxido de Sódio </li>
-      <li> Ca(OH)2: Hidróxido de Cálcio </li>
-      <li> Mg(OH)2: Hidróxido de Magnésio </li>
-      <li> NH4OH: Hidróxido de amônio </li>
-      <li> Ba(Oh)2: Hidróxido de Bário</li>
-      <li> Al(OH)3: Hidróxido de Alumínio </li>
-      <li> Zn(OH)2: Hidróxido de Zinco </li>
+    <p class="Expl"> E para calcular o número de nêutrons, usamos mais uma conta:</p>
+    <p class="Expl" style="font-family: 'Courier New', Courier, monospace; font-size: 20px;"> <b> N = A - Z </b> </p> <br>
 
-    </ul>
-    <br>
-    <br><br><br><br><br>
-    <nav class="barInf"><p class="txtbarInfo"> Este site foi feito por alunos da  <a href="https://www.cps.sp.gov.br/etecs/etec-elias-nechar/"><b> Etec Elias Nechar, </b> </a><br> as
-      alguns textos foram retirados de IA, e outros foram de sites como <a href="https://mundoeducacao.uol.com.br/"> Mundo Educação </a> e <a href="https://www.todamateria.com.br/"> Toda Matéria </a> <br> <br> 
-      Viu algo com erro? Entre em contato. <br>
-    heitor.cangussu@etec.sp.gov.br <br>  joao.almeida332@etec.sp.gov.br </p>
-    <img src="Img/Eteclogo-Photoroom.png" style="float: right; margin-top: -224px; margin-right: 6%;"> <br>
-    
-    </nav>
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-  </body>
+    <p id="Atp"> Cientistas </p>
+    <p class="Expl"> Agora vamos ver os cientistas e químicos que fizeram parte da história do átomo.
+
+    <p id="Atp"> Demócrito e Leucipo </p>
+    <img src="Img/democrito (1).png" style="margin-left: 4%;"> <br> <br>
+    <p class="Expl">
+      Os primeiros a propor a ideia do átomo foram os filósofos gregos Demócrito e Leucipo no século V a.C. Eles acreditavam que a matéria era composta de partículas indivisíveis chamadas “átomos” (do grego “a-tomos”, que significa “indivisível”). Para eles, os átomos eram eternos, imutáveis e variavam em forma e tamanho</p>
+    <p id="Atp"> John Dalton </p>
+    <img src="Img/foto-john-dalton.jpg" style="margin-left: 4%;"> <br> <br>
+    <p id="Atp"> Modelo de Dalton </p>
+    <p class="Expl">
+      <br> No início do século XIX, o químico inglês John Dalton desenvolveu a primeira teoria atômica moderna. Dalton propôs que cada elemento químico era composto por um tipo único de átomo, que eram esferas maciças e indivisíveis, esse modelo hoje tem o nome de bola de bilhar, pois era muito semelhante. Ele também sugeriu que os átomos de diferentes elementos poderiam se combinar em proporções fixas para formar compostos.
+      </p>
+      <img src="Img/modelodalton.png" style="margin-left: 4.1%;">
+      <p id="Atp"> J.J Thomson</p>
+      <img src="Img/thomson.jfif" style="margin-left: 4%;"> <br> <br>
+      <p id="Atp"> Modelo de J.J Thomson </p>
+      <p class="Expl"> Em 1897, o físico britânico J.J. Thomson descobriu o elétron, uma partícula subatômica carregada negativamente. Ele propôs o modelo do “pudim de passas”, onde os elétrons estavam embutidos em uma esfera positiva, semelhante a passas em um pudim.
+        </p><img src="Img/modelothomson.jfif" style="margin-left: 4%;">
+
+        <p id="Atp"> Ernest Rutherford </p>
+        <img src="Img/ernest.jfif" style="margin-left: 4%;"> <br> <br>
+        <p id="Atp"> Modelo de Rutherford </p>
+        <p class="Expl"> Em 1913, o físico dinamarquês Niels Bohr refinou o modelo de Rutherford, sugerindo que os elétrons orbitavam o núcleo em níveis de energia definidos. Quando um elétron mudava de nível, ele emitia ou absorvia uma quantidade específica de energia, explicando assim os espectros de emissão dos átomos.
+          </p><img src="Img/modelo de ernestRutherford.jfif" style="margin-left: 4%;">
+
+                  <p id="Atp"> Niels Bohr</p>
+        <img src="Img/nielsbohr.jpg" style="margin-left: 4%;"> <br> <br>
+        <p id="Atp"> Modelo de Bohr </p>
+        <p class="Expl"> Em 1913, o físico dinamarquês Niels Bohr refinou o modelo de Rutherford, sugerindo que os elétrons orbitavam o núcleo em níveis de energia definidos. Quando um elétron mudava de nível, ele emitia ou absorvia uma quantidade específica de energia, explicando assim os espectros de emissão dos átomos.
+          </p><img src="Img/modelobohr (3).png" style="margin-left: 4%;">
+          <br><br><br><br><br>
+          <nav class="barInf"><p class="txtbarInfo"> Este site foi feito por alunos da <b> Etec Elias Nechar, </b> <br> Mas
+            Alguns textos foram feitos por IA, e outros foram tirados de sites como <a href="https://mundoeducacao.uol.com.br/"> Mundo Educação </a> e <a href="https://www.todamateria.com.br/"> Toda Matéria </a> <br> <br> 
+            Viu algo com erro? Entre em contato. <br>
+          heitor.cangussu@etec.sp.gov.br <br>  joao.almeida332@etec.sp.gov.br </p>
+          <img src="Img/Eteclogo-Photoroom.png" style="float: right; margin-top: -224px; margin-right: 6%;"> <br>
+          
+          </nav>
+          <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div class="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
+          <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+          <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+          </script>
+        
 </body>
 </html>
