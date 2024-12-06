@@ -11,6 +11,7 @@
     padding-left: 30px;
     padding-right: 30px;
     color: black;
+    gap: 1rem;
 
 
 }
@@ -86,6 +87,8 @@ body {
 #JH {
     background-color: rgb(255, 255, 255);
     height: 56px;
+    width: 3vw;
+    margin-left: 0px;
 
 }
 
