@@ -6,21 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela Periodica</title>
     <style>
-        
+   body {
+    background-color: #0d183a;
+    margin-top: 0px;
+}
+
+.navTP {
+    display: flex;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    width: 100%;
+}
+
+
     </style>
-    <link rel="stylesheet" href="css/styleTp.css">
+    <link rel="stylesheet" href="css/styleTP.css">
     <link rel="stylesheet" href="css/cores.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body style="background-color: #0d183a; margin-top: 20px;">
-    <a href="Dicionário.html" style="text-decoration: none;"><h1 style="text-align: left; font-size: 1.5rem; letter-spacing: 0.05rem;  border: none; color: #FFFF; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top: 3; margin-left: 3.65%;">&larr; Voltar</h1> </a>
+
+<body style="background-color: #0d183a; margin-top: 0px;">
+    <nav class="navTP" >
+        <a id="TMQ"> Terminologia  Química </a> 
+        <a href="index.html" class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Menu </a>
+        <a href="Dicionário.html" class="txts" id="tBP" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Dicionário </a>
+        <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(70, 70, 70);"> Tabela Periódica </a>
+        
+        <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(216, 216, 216);"> Desabilitado </a>
+        
+    </nav>
+    
     <header>
         <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Tabela Periodica</h1>
     </header>
     <main>
         <table id="principal">
             <tr>
-                <th id="txtTh">Tabela Periodica</th>
+                <th id="txtTh">Tabela Periódica</th>
                 <th id="txt">
                     <div id="icone" class="invisivel" >
                         <p id="indice"></p>
@@ -31,8 +53,11 @@
                     <div id="inicial">
                     A Tabela Periódica é um modelo que agrupa todos os elementos químicos conhecidos e suas propriedades. Eles estão organizados em ordem crescente correspondente aos números atômicos (número de prótons)
                     </div>
-                </th>    
+
+                    </th>  
             </tr>
+            
+
             <tr> 
                 <td id="h" class="nao-metal">H<p>1</p></td>
                 <td class="oculto"></td>
@@ -248,6 +273,6 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
       </script>
 
-    
+  
 </body>
 </html>
