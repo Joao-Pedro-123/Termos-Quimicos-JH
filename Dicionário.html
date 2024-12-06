@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
   <style>
     #Lib {
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -61,15 +59,13 @@
       height: 40px;
     }
 
-    .content { /* Usar flexbox para layout flexível */
-    justify-content: center; /* Centralizar os links horizontalmente */
-    align-items: center; /* Centralizar os links verticalmente */
-    gap: 1rem; /* Espaçamento entre os links */
-}
-.links-container {
-    display: flex; /* Usar flexbox para alinhar links horizontalmente */
-    gap: 1rem; /* Espaçamento entre os links */
-}
+
+    .links-container {
+      display: flex;
+      /* Usar flexbox para alinhar links horizontalmente */
+      gap: 1rem;
+      /* Espaçamento entre os links */
+    }
 
     #textb {
       margin-left: 4%;
@@ -260,13 +256,13 @@
     }
 
     .barInf {
-      background-color: white;
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      font-size: 1.2rem;
-      height: 20%;
-      padding-top: 4.5%;
-
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
 
     .txtbarInfo {
       padding-left: 6%;
@@ -301,27 +297,73 @@
     }
 
     .txt,
-    .txA,
+    .txtA,
     .txtB,
     .txtC,
     .txtD,
     .txtE,
-    .txtF {
+    .txtF,
+    .txtG,
+    .txtH,
+    .txtI,
+    .txtJ,
+    .txtK,
+    .txtL,
+    .txtM,
+    .txtN,
+    .txtO,
+    .txtP,
+    .txtQ,
+    .txtR,
+    .txtS,
+    .txtT,
+    .txtU,
+    .txtV,
+    .txtW,
+    .txtX,
+    .txtY,
+    .txtZ {
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       color: black;
       padding: 7px;
       font-size: 1.4rem;
       text-decoration: none;
       transition: 0.25s all;
-      display: block;
-      width: 10.8%;
+      margin-bottom: -1.5rem;
+      /* Ajustar a margem superior para diminuir o espaço */
+
     }
 
     .txA:hover,
     .txtB:hover,
-    .txtC:hover {
+    .txtC:hover,
+    .txtD:hover,
+    .txtE:hover,
+    .txtF:hover,
+    .txtG:hover,
+    .txtH:hover,
+    .txtI:hover,
+    .txtJ:hover,
+    .txtK:hover,
+    .txtL:hover,
+    .txtM:hover,
+    .txtN:hover,
+    .txtO:hover,
+    .txtP:hover,
+    .txtQ:hover,
+    .txtR:hover,
+    .txtS:hover,
+    .txtT:hover,
+    .txtU:hover,
+    .txtV:hover,
+    .txtW:hover,
+    .txtX:hover,
+    .txtY:hover,
+    .txtZ:hover {
       transition: 0.25s all;
-      font-size: 1.9rem;
+      transform: scale();
+      letter-spacing: 0.1rem;
+      margin-left: -0.2rem;
     }
 
     #tA,
@@ -329,14 +371,33 @@
     #tC,
     #tD,
     #tE,
-    #tF {
+    #tF,
+    #tG,
+    #tH,
+    #tI,
+    #tJ,
+    #tK,
+    #tL,
+    #tM,
+    #tN,
+    #tO,
+    #tP,
+    #tQ,
+    #tR,
+    #tS,
+    #tT,
+    #tU,
+    #tV,
+    #tW,
+    #tX,
+    #tY,
+    #tZ {
       background-color: #00c7a6;
       background-size: 10px;
       color: black;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
       width: 88.6vw;
-      margin-right: 4%;
       padding-left: 7px;
       display: block;
     }
@@ -363,10 +424,127 @@
       background-color: #0d183a;
     }
 
-    #espA, #espB, #espC, #espC{
+    #espA,
+    #espB,
+    #espC,
+    #espC {
       visibility: hidden;
       font-size: 0.4rem;
     }
+
+    #txtpartA,
+    #txpartB,
+    #txtpartC,
+    #txtpartD,
+    #txtpartE,
+    #txtpartF,
+    #txtpartG,
+    #txtpartH,
+    #txtpartI,
+    #txtpartJ,
+    #txtpartK,
+    #txtpartL,
+    #txtpartM,
+    #txtpartN,
+    #txtpartO,
+    #txtpartP,
+    #txtpartQ,
+    #txtpartR,
+    #txtpartS,
+    #txtpartT,
+    #txtpartU,
+    #txtpartV,
+    #txtpartW,
+    #txtpartX,
+    #txtpartY,
+    #txtpartZ {
+      margin-left: 4%;
+      margin-right: 4%;
+      width: 88.5vw;
+      max-width: 88.5vw;
+
+    }
+
+    .links-container {
+      display: flex;
+      flex-wrap: wrap;
+      /* Permitir que os itens se movam para a próxima linha */
+      gap: 1rem;
+      /* Espaçamento entre os links */
+      white-space: nowrap;
+      /* Impedir quebra de palavras */
+      overflow-wrap: normal;
+    }
+
+    body {
+    background-color: #0d183a;
+    margin-top: 0px;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Ajustar o padding da barra de navegação */
+}
+
+.navbar-brand {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    white-space: nowrap; /* Impedir quebra de linha */
+    margin: 0; /* Remover margem superior */
+    margin-top: -10px;
+}
+
+.nav-link {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    color: rgb(94, 94, 94);
+    white-space: nowrap; /* Impedir quebra de linha */
+    margin-top: -10px;
+}
+
+.nav-link.active {
+    color: rgb(51, 51, 51);
+}
+
+.nav-link.disabled {
+    color: rgb(216, 216, 216);
+}
+
+.form-control {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px; /* Aumentar a largura da barra de pesquisa */
+    margin-top: -10px;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Espaçamento entre o campo de pesquisa e o botão */
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-control {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
   </style>
   <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -375,7 +553,7 @@
 
 <style src="index.js"></style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary navig JH">
-  <div class="container-fluid" id="JH">
+  <div class="container-fluid" id="JH" style="padding-top: 10px; gap: 1rem;">
     <a class="navbar-brand" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
       Terminologia Química </a>
 
@@ -408,7 +586,7 @@
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" id="Pesquisa" placeholder="Digite Algo Aqui..."
           aria-label="Digite Algo Aqui...">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+        <button class="btn btn-outline-success" type="submit" style="margin-top: -10px;"> Limpar </button>
       </form>
     </div>
   </div>
@@ -418,7 +596,8 @@
     <table>
       <tr>
         <div style="margin-right: -0.5rem;">
-          <a style="background: none; border: none; text-decoration: none; color: rgb(151, 151, 151); margin-right: 0.4rem;" href="index.html"> Menu </a>
+          <a style="background: none; border: none; text-decoration: none; color: rgb(151, 151, 151); margin-right: 0.4rem;"
+            href="index.html"> Menu </a>
           <button style="background: none; border: none;"> <a href="Dicionário.html"
               style="text-decoration: none; color: rgb(54, 54, 54);"> Dicionário </a></button>
           <button style="background: none; border: none;"> <a href="tabel-periodica.html"
@@ -428,7 +607,7 @@
               aria-label="Digite Algo Aqui..."
               style="border-radius: 4px; border-color: rgb(47, 168, 47); border: 0.01rem solid rgb(0, 128, 102); height: 1.9rem;">
             <button class="btn btn-outline-success" type="submit"
-              style="height: 1.87rem; padding-top: 0.1rem; margin-bottom: 5px;">Pesquisar</button>
+              style="height: 1.87rem; padding-top: 0.1rem; margin-bottom: 5px;"> Limpar </button>
           </form>
         </div>
       </tr>
@@ -437,6 +616,7 @@
 </div>
 
 </th>
+
 <body id="body">
   <h2 id="Lib"> Dicionário </h2>
   <p id="textb"> Aqui você encontrará todas as terminologias químicas e o que cada uma signifíca.</p>
@@ -478,111 +658,485 @@
   <br><br>
   <table class="alfbt">
 
-    <tr style="display: flex;">
+    <tr>
 
-      <td class="content" id="txtpartA" style="background-color: white; border-radius: 8px;">
+      <div class="content" id="txtpartA" style="background-color: white; border-radius: 8px; ">
         <a class="titl" id="tA"
           style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
-          A </a> 
-          <div class="links-container"></div>
-        <a class="txA" href="Atomo.html" id="atm">Átomo</a> <a class="txA" id="atm"> Absorbância  </a>
-        
-        <a class="txA" id="atm">Átomo</a>
+          A</a>
+        <div class="links-container"
+          style="display: flex; margin-bottom: 10px; padding-bottom: 20px; white-space: normal; overflow-wrap: break-word; word-wrap: break-word;">
+          <a class="txtA" id="abs"> Absorbância </a>
+          <a href="" class="txtA" id="absco"> Absorção</a>
+          <a href="" class="txtA" id="acid"> Ácidos </a>
+          <a href="" class="txtA" id="alcd"> Alcadienos </a>
+          <a href="" class="txtA" id="alclm"> Alcalimetria </a>
+          <a href="" class="txtA" id="alcln"> Alcalinidade </a>
+          <a href="" class="txtA" id="alcan"> Alcanos </a>
+          <a href="" class="txtA" id="alcen"> Alcenos </a>
+          <a href="" class="txtA" id="alcin"> Alcinos </a>
+          <a href="" class="txtA" id="aldi"> Aldeído </a>
+          <a href="" class="txtA" id="aldxa"> Aldoxila</a>
+          <a href="" class="txtA" id="amna"> Amônia </a>
+          <a href="" class="txtA" id="antbrp"> Antibioticoterapia </a>
+          <a href="" class="txtA" id="aqcm"> Aquecimento </a>
+          <a href="" class="txtA" id="armt"> Areômetro </a>
+          <a class="txtA" href="Atomo.html" id="atm">Átomo</a>
+          <a href="" class="txtA" id="atmg"> Átomo-Grama </a>
+          <a href="" class="txtA" id="autionz"> Autoionização </a>
+        </div>
       </div>
-      </td>
     </tr>
 
-    <tr id="espA"><td>A</td></tr>
-    
+  
     <tr style="display: inline;">
-      <td class="content" id="txtpartB" style="background-color: white; border-radius: 8px;">
+      <div class="content" id="txtpartB"
+        style="background-color: white; border-radius: 8px; margin-left: 4%; margin-right: 4%; width: 88.5vw;">
         <a class="titl" id="tB"
           style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
           B </a>
-        <a class="txtB" href="Base.html" id="bse">Base</a>
-        <a class="txtB" id="bario">Bário</a>
-        <a class="txtB" id="bario">Bário</a>
-      </td>
+        <div class="links-container"
+          style="display: flex; margin-bottom: 10px; padding-bottom: 20px; white-space: normal; overflow-wrap: break-word; word-wrap: break-word;">
+          <a href="" class="txtB" id="blnc"> Balança </a>
+          <a href="" class="txtB" id="bario"> Bário </a>
+          <a class="txtB" href="Base.html" id="bse">Base</a>
+          <a href="" class="txtB" id="baume"> Baumé </a> 
+          <a href="" class="txtB" id="beq"> Béquer </a>
+          <a href="" class="txtB" id="bicrb"> Bicarbonatos </a>
+          <a href="" class="txtB" id="boro"> Boro </a>
+          <a href="" class="txtB" id="brix"> Brix </a>
+          <a href="" class="txtB" id="brmat"> Bromato </a>
+          <a href="" class="txtB" id="brmet"> Brometo </a>
+          <a href="" class="txtB" id="brt"> Bureta </a>
+          <a href="" class="txtB" id="butnm"> Butanamida </a>
+        </div>
+      </div>
     </tr>
 
-    <tr id="espB"><td>B</td></tr>
+  
 
     <tr style="display: inline;">
-      <td class="content" id="txtpartC" style="background-color: white; border-radius: 8px;">
+      <div class="content" id="txtpartC" style="background-color: white; border-radius: 8px;">
         <a class="titl" id="tC"
           style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
           C </a>
-        <a class="txtC" href="Cátodo.html" id="carb">Cátodo</a>
-        <a class="txtC" id="carb">Carbono</a>
-        <a class="txtC" id="carb">Carbono</a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a class="txtC" id="cad"> Cadeia </a>
+          <a class="txtC" id="cadn"> Cadinhos </a>
+          <a class="txtC" id="calcnc"> Calcinação </a>
+          <a class="txtC" id="calc"> Cálcio </a>
+          <a class="txtC" id="carbnt"> Carbonatos </a>
+          <a class="txtC" id="carbnl"> Carbonila </a>
+          <a class="txtC" id="carb"> Carbono </a>
+          <a class="txtC" id="catl"> Catalisador </a>
+          <a class="txtC" href="Cátodo.html" id="catd">Cátodo</a>
+          <a href="" class="txtC" id="ctn"> Cetona </a>
+          <a href="" class="txtC" id="chmb"> Chumbo </a>
+          <a href="" class="txtC" id="clfm"> Clorofórmio </a>
+          <a href="" class="txtC" id="combst"> Combustíveis </a>
+          <a href="" class="txtC" id="compn"> Componente </a>
+          <a href="" class="txtC" id="comps"> Composto </a>
+          <a href="" class="txtC" id="compr"> Comprimento </a>
+          <a href="" class="txtC" id="concn"> Concentração </a>
+          <a href="" class="txtC" id="condtb"> Condutibilidade </a>
+          <a href="" class="txtC" id="cndvm"> Conduvímetro </a>
+          <a href="" class="txtC" id="crrs"> Corrosão </a>
+          <a href="" class="txtC" id="crstz"> Cristalização </a>
+          <a href="" class="txtC" id="crmtg"> Cromatografia </a>
+          <a href="" class="txtC" id="crm"> Crômio </a>
+          <a href="" class="txtC" id="cbt"> Cubeta </a>
+          <a href="" class="txtC" id="cltr"> Cultura </a>
+        </div>
+      </div>
 
-      </td>
-      
-    </tr>
-    <tr id="espC"><td>C</td></tr>
+   
     <tr>
-      <td class="content" id="txtpartD" style="background-color: white; border-radius: 8px;">
+      <div class="content" id="txtpartD" style="background-color: white; border-radius: 8px;">
         <a class="titl" id="tD"
           style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
           D </a>
-        <a class="txtD" href="Destilação.html" id="dest"> Destilação </a>
-        <a class="txtD" id="diox">Dióxido</a>
-        <a class="txtD" id="diox">Dióxido</a>
-      </td>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtD" id="dcntc"> Decantação </a>
+          <a href="" class="txtD" id="densd"> Densidade </a>
+          <a href="" class="txtD" id="densm"> Densímetro </a>
+          <a href="" class="txtD" id="dsscd"> Dessecador </a>
+          <a class="txtD" href="Destilação.html" id="dest"> Destilação </a>
+          <a class="txtD" id="dtrmn"> Determinação </a>
+          <a href="" class="txtD" id="digst"> Disgestor </a>
+          <a href="" class="txtD" id="diluic"> Diluição </a>
+        </div>
+      </div>
     </tr>
 
-    <tr id="espD"><td>D</td></tr>
-
-    <!-- <td class="content">
-        <a class="txtE" id="enx">Enxofre</a><br>
-        <a class="txtE" id="enx">Enxofre</a><br>
-        <a class="txtE" id="enx">Enxofre</a><br>
-      </td>
-      <td class="content">
-        <a class="txtF" id="fosf">Fósforo</a><br>
-        <a class="txtF" id="fosf">Fósforo</a><br>
-        <a class="txtF" id="fosf">Fósforo</a><br>
-      </td> -->
     
-  </table>
-  <!-- <table id="alfbt2">
-    <td>
-      <tr style="margin-top: 40px;">
+    <tr> 
+      <div class="content" id="txtpartE" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tE"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          E </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtE" id="eblc"> Ebulição </a>
+          <a href="" class="txtE" id="elmnt"> Elemento </a>
+          <a href="" class="txtE" id="eltrd"> Eletrodo </a>
+          <a href="" class="txtE" id="eltsf"> Eletrosfera </a>
+          <a class="txtE" id="entlp"> Entalpia </a>
+          <a class="txtE" id="entrp"> Entropia </a>
+          <a href="" class="txtE" id="eqlb"> Equilíbrio </a>
+          <a href="" class="txtE" id="erstn"> Eritrosina </a>
+          <a href="" class="txtE" id="ermyr"> Erlenmeyer </a>
+          <a href="" class="txtE" id="escmn"> Escoamento </a>
+          <a href="" class="txtE" id="efgc"> Esfregaço </a>
+          <a href="" class="txtE" id="eptfm"> Espectrofômetro </a>
+          <a href="" class="txtE" id="ester"> Éster </a>
+          <a href="" class="txtE" id="estnc"> Estrônico </a>
+          <a href="" class="txtE" id="estf"> Estufa </a>
+          <a href="" class="txtE" id="etn"> Etanol </a>
+          <a href="" class="txtE" id="eter"> Éter </a>
+          <a href="" class="txtE" id="eterand"> Éter-Anidro </a>
+          <a href="" class="txtE" id="etlng"> Etileno-Glicol </a>
+          <a href="" class="txtE" id="extc"> Extração </a>
+        </div>
+      </div>
+    </tr>
 
-        <th class="titl" id="tE"> E </th>
-        <th class="titl" id="tF"> F </th>
-        <th class="titl" id="tG"> G </th>
-        <th class="titl" id="tH"> H </th>
-        <th class="titl" id="tI"> I </th>
-        <th class="titl" id="tJ"> J </th>
-        <th class="titl" id="tK"> K </th>
-        <th class="titl" id="tL"> L </th>
-        <th class="titl" id="tM"> M </th>
-        <th class="titl" id="tN"> N </th>
-        <th class="titl" id="tO"> O </th>
-        <th class="titl" id="tP"> P </th>
-        <th class="titl" id="tQ"> Q </th>
-        <th class="titl" id="tR"> R </th>
-        <th class="titl" id="tS"> S </th>
-        <th class="titl" id="tT"> T </th>
-        <th class="titl" id="tU"> U </th>
-        <th class="titl" id="tV"> V </th>
-        <th class="titl" id="tW"> W </th>
-        <th class="titl" id="tX"> X </th>
-        <th class="titl" id="tY"> Y </th>
-        <th class="titl" id="tZ"> Z </th>
-      </tr>
-    </td>
-  </table> -->
+    <tr>
+      <div class="content" id="txtpartF" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tF"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          F </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtF" id="fns"> Fenóis </a>
+          <a href="" class="txtF" id="fnftl"> Fenolftaleína </a>
+          <a href="" class="txtF" id="ftrc"> Filtração </a>
+          <a href="" class="txtF" id="fltc"> Flotação </a>
+          <a class="txtF" id="flrt"> Fluoreto </a>
+          <a class="txtF" id="frmil">  Formila </a>
+          <a href="" class="txtF" id="frmul"> Fórmula </a>
+        </div>
+      </div>
+    </tr>
+
+    
+    <tr>
+      <div class="content" id="txtpartG" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tG"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          G </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtG" id="gas"> Gás </a>
+        </div>
+      </div>
+    </tr>
+
+    
+    <tr>
+      <div class="content" id="txtpartH" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tH"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          H </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtH" id=""> Heteroátomos </a>
+          <a href="" class="txtH" id=""> Hidrocarbonetos </a>
+          <a href="" class="txtH" id=""> Hidroxi-Benzeno </a>
+          <a class="txtH" id="diox"> Hidróxidos </a>
+          <a class="txtH" id="diox">  Hidroxila </a>
+          <a href="" class="txtH" id=""> Homogeneização </a>
+        </div>
+      </div>
+    </tr>
+
+  
+    <tr>
+      <div class="content" id="txtpartI" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tI"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          I </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtF" id="indt"> Indicador-Tampão </a>
+          <a href="" class="txtF" id="infl"> Inflamabilidade </a>
+          <a href="" class="txtF" id="inib"> Inibição </a>
+          <a href="" class="txtF" id="iodt"> Iodeto </a>
+          <a class="txtF" id="iod"> Iodimetria </a>
+          <a class="txtE" id="ion"> Íon </a>
+          <a href="" class="txtF" id="ionz"> Ionização </a>
+          <a href="" class="txtF" id="isor"> Isomeria </a>
+          <a href="" class="txtF" id="isoms"> Isômeros </a>
+          <a href="" class="txtH" id="Isop"> Isopropílico </a>
+        </div>
+      </div>
+    </tr>
+
+ 
+    <tr>
+      <div class="content" id="txtpartJ" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tJ"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          J </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtJ" id="Ncont"> Nada Por Aqui... </a>
+        </div>
+      </div>
+    </tr>
+
+    
+    <tr>
+      <div class="content" id="txtpartK" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tK"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          K </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtK" id="Ncont"> Nada Por Aqui... </a>
+        </div>
+      </div>
+    </tr>
 
 
+ 
+    <tr>
+      <div class="content" id="txtpartL" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tL"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          L </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtL" id=""> Ligação </a>
+          <a href="" class="txtL" id=""> Liquefação </a>
+          <a href="" class="txtL" id=""> Líquido </a>
+        </div>
+      </div>
+    </tr>
 
+   
+    <tr>
+      <div class="content" id="txtpartM" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tM"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          M </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtM" id=""> Magnésio </a>
+          <a href="" class="txtM" id=""> Massa </a>
+          <a href="" class="txtM" id=""> Metilorange </a>
+          <a href="" class="txtM" id=""> Mistura </a>
+          <a href="" class="txtM" id=""> Mol </a>
+          <a href="" class="txtM" id=""> Molaridade </a>
+          <a href="" class="txtM" id=""> Molécula </a>
+          <a href="" class="txtM" id=""> Mufla </a>
+        </div>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="content" id="txtpartN" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tN"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          N </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtN" id=""> Neutralização </a>
+          <a href="" class="txtN" id=""> Nêutrons </a>
+          <a href="" class="txtN" id=""> Nitrilo </a>
+        </div>
+      </div>
+    </tr>
+
+    
+    <tr>
+      <div class="content" id="txtpartO" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tO"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          O </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtO" id=""> Oxalatos </a>
+          <a href="" class="txtO" id=""> Oxidação </a>
+        </div>
+      </div>
+    </tr>
+
+  
+    <tr>
+      <div class="content" id="txtpartP" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tP"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          P </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtP" id=""> Pesafiltro </a>
+          <a href="" class="txtP" id=""> Pipeta </a>
+          <a href="" class="txtP" id=""> Polarimetria </a>
+          <a href="" class="txtP" id=""> Potássio </a>
+          <a href="" class="txtP" id=""> Precipitação </a>
+          <a href="" class="txtP" id=""> Precipitado </a>
+          <a href="" class="txtP" id=""> Pressão </a>
+          <a href="" class="txtP" id=""> Propanona </a>
+          <a href="" class="txtP" id=""> Prótons </a>
+          <a href="" class="txtP" id=""> Pureza </a>
+          <a href="" class="txtP" id=""> Purificação </a>
+        </div>
+      </div>
+    </tr>
+    
+    
+    <tr>
+      <div class="content" id="txtpartQ" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tQ"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          Q </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtQ" id="Ncont"> Nada Por Aqui... </a>
+        </div>
+      </div>
+    </tr>
+
+   
+    <tr>
+      <div class="content" id="txtpartR" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tR"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          R </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtR" id=""> Reação </a>
+          <a href="" class="txtR" id=""> Reagente </a>
+          <a href="" class="txtR" id=""> Reagentes </a>
+          <a href="" class="txtR" id=""> Recristalização </a>
+          <a href="" class="txtR" id=""> Redução </a>
+          <a href="" class="txtR" id=""> Refração </a>
+          <a href="" class="txtR" id=""> Refratometria </a>
+          <a href="" class="txtR" id=""> Refratômetro </a>
+          <a href="" class="txtR" id=""> Retículos </a>
+          <a href="" class="txtR" id=""> Reversibilidade </a>
+      </div>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="content" id="txtpartS" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tS"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          S </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtS" id=""> Sacarímetros </a>
+          <a href="" class="txtS" id=""> Sacarose </a>
+          <a href="" class="txtS" id=""> Sódio </a>
+          <a href="" class="txtS" id=""> Sólido </a>
+          <a href="" class="txtS" id=""> Solubilidade </a>
+          <a href="" class="txtS" id=""> Solução </a>
+          <a href="" class="txtS" id=""> Solutos </a>
+          <a href="" class="txtS" id=""> Solvente </a>
+          <a href="" class="txtS" id=""> Sublimação </a>
+          <a href="" class="txtS" id=""> Substâncias </a>
+          <a href="" class="txtS" id=""> Surfatantes </a>
+          <a href="" class="txtS" id=""> Suspensão </a>
+        </div>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="content" id="txtpartT" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tT"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          T </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+          <a href="" class="txtT" id=""> Temperatura </a>
+          <a href="" class="txtT" id=""> Teor </a>
+          <a href="" class="txtT" id=""> Termoquímica </a>
+          <a href="" class="txtT" id=""> Tioálcoois  </a>
+          <a href="" class="txtT" id=""> Titulação </a>
+          <a href="" class="txtT" id=""> Titulante </a>
+          <a href="" class="txtT" id=""> Titulometria </a>
+          <a href="" class="txtT" id=""> Tolueno </a>
+          <a href="" class="txtT" id=""> Tornassol </a>
+          <a href="" class="txtT" id=""> Triálcool </a>
+          <a href="" class="txtT" id=""> Trimetilcarbinol </a>
+          <a href="" class="txtT" id=""> Trinitração </a>
+          <a href="" class="txtT" id=""> Troálcool </a>
+          <a href="" class="txtT" id=""> Tugstênio </a>
+          <a href="" class="txtT" id=""> Turbidimetria </a>
+          <a href="" class="txtT" id=""> Turvação </a>
+        </div>
+      </div>
+    </tr>
+
+   
+    <tr>
+      <div class="content" id="txtpartU" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tU"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          U </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+         <a href="" class="txtU" id=""> Ultracongelamento </a>
+         <a href="" class="txtU" id=""> Uréia </a>
+        </div>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="content" id="txtpartV" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tV"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          V </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+         <a href="" class="txtV" id=""> Vanádio </a>
+         <a href="" class="txtV" id=""> Variabilidade </a>
+         <a href="" class="txtV" id=""> Vazamento </a>
+         <a href="" class="txtV" id=""> Vedação </a>
+         <a href="" class="txtV" id=""> Viragem </a>
+         <a href="" class="txtV" id=""> Volatilização </a>
+         <a href="" class="txtV" id=""> Volume </a>
+        </div>
+      </div>
+    </tr>
+
+  
+    <tr>
+      <div class="content" id="txtpartW" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tW"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          W </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+         <a href="" class="txtW" id="Ncont"> Nada Por Aqui...   </a>
+        </div>
+      </div>
+    </tr>
+
+    <tr>
+      <div class="content" id="txtpartX" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tX"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          X </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+         <a href="" class="txtX" id=""> Xenônio </a>
+        </div>
+      </div>
+    </tr>
+
+    
+    <tr>
+      <div class="content" id="txtpartY" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tY"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          Y </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+         <a href="" class="txtY" id="Ncont"> Nada Por Aqui...  </a>
+        </div>
+      </div>
+    </tr>
+
+    
+    <tr>
+      <div class="content" id="txtpartZ" style="background-color: white; border-radius: 8px;">
+        <a class="titl" id="tZ"
+          style="border-top-left-radius: 8px; border-top-right-radius: 8px; margin-top: -1px; margin-left: -1px; margin-right: -1px; text-decoration: none;">
+          Z </a>
+        <div class="links-container" style="display: flex; margin-bottom: 10px; padding-bottom: 20px;">
+         <a href="" class="txtY" id="Ncont"> Nada Por Aqui...  </a>
+        </div>
+      </div>
+    </tr>   
+ </table>
+ 
 
 
   </div>
- 
-  <br><br>
 
+  <br>
+  <br>
 
   <nav class="barInf">
     <p class="txtbarInfo"> Este site foi feito por alunos da <b> Etec Elias Nechar, </b> <br> Mas
@@ -591,7 +1145,7 @@
         Matéria </a> <br> <br>
       Viu algo com erro? Entre em contato. <br>
       heitor.cangussu@etec.sp.gov.br <br> joao.almeida332@etec.sp.gov.br </p>
-    <img src="Img/Eteclogo-Photoroom.png" style="float: right; margin-top: -224px; margin-right: 6%;"> <br>
+    <img src="Img/Eteclogo-Photoroom.png"> <br>
 
 
   </nav>
@@ -606,10 +1160,13 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+
+  
 </body>
 <script src="JS/indexjs.js">
 
 
 </script>
+
 
 </html>
