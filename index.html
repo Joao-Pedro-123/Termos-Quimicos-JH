@@ -10,67 +10,87 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
     <style>
-      .barInf{
-          background-color: white;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-          font-size: 1.2rem;
-          height: 20%;
-          padding-top: 4.5%; 
-          
-        }
-        .TQ{
-          margin-top: 0.9rem;
-        }
+        .barInf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    flex-wrap: wrap; /* Permitir que os itens se movam para a próxima linha */
+}
+
+.txtbarInfo {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    flex: 1; /* Permitir que o texto ocupe o espaço disponível */
+}
+
+.barInf img {
+    max-width: 150px; /* Ajustar o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-left: 1rem;
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+    .barInf {
+        flex-direction: column; /* Mudar direção dos itens para coluna */
+        align-items: flex-start; /* Alinhar itens ao início */
+    }
+
+    .barInf img {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+.navTP {
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    width: 100%;
+    background: white;
+    height: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 1rem;
+    display: flex;
+}
+
+@media (max-width: 1000px) {
+    .navTP {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem;
+        width: vw; /* Definir a largura como 100% da viewport */
+    }
+    .nav-title {
+        margin-bottom: 0;
+    }
+
+    .nav-links {
+        justify-content: flex-end;
+    }
+}
 
     </style>
 </head> 
 <body>
   
-<nav class="navbar navbar-expand-lg bg-body-tertiary navig" id="JH">
-  <div class="container-fluid" id="JH">
-    <center> <p class="navbar-brand TQ" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Terminologia  Química </p> </center>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll JH" >
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <button class="nav-link active menu" style="color: rgb(54, 54, 54); cursor: default;" aria-current="page">Menu</button>
-        </li>
-        <li class="nav-item"> 
-          <a class="nav-link" style="color: rgb(151, 151, 151);" href="Dicionário.html">Dicionário</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" style="color: rgb(151, 151, 151)" href="tabel-periodica.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Tabela Periódica <br>
-          </a> 
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
-        </li>
-      </ul>
-      
-    </div>
-  </div>
-</nav>
-<div id="bRes"> 
-  <center>
-  <table>
-    <tr>
-      <div>
-      <button style="background: none; border: none;">  Menu </button>
-      <button style="background: none; border: none;"> <a href="Dicionário.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Dicionário </a></button>
-      <button style="background: none; border: none;"> <a href="tabel-periodica.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Tabela Periódica </a> </button>
-    </div>
-    </tr>
-  </table>
-</center>
-</div>
-      <div class="introducao">
+  <nav class="navTP" >
+    <a id="TMQ"> Terminologia  Química </a> 
+    <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Menu </a>
+    <a href="Dicionário.html" class="txts" id="tBP" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Dicionário </a>
+    <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(70, 70, 70);"> Tabela Periódica </a>
+    
+    <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(216, 216, 216);"> Desabilitado </a>
+    
+</nav>      
+<div class="introducao">
         <h5 id="term">Terminologias Químicas</h5> <br>            
         <h6 id="ex"> Olá, seja bem-vindo ao dicionário de Termos Químicos, aqui você encontrará <br> um universo de informações químicas.
         <br> <br> Na barra de navegação você verá alguns botões, que levam você para outras páginas do site.   
@@ -84,16 +104,16 @@
       <div class="Principais">
         
           <div class="card" id="mtr" style="width: 18rem;">
-            <img src="Img/atom-1674878_1280-Photoroom.png" class="card-img-top" alt="...">
+            <img src="Img/base.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Matéria</h5>
-              <p class="card-text">Matéria é tudo aquilo que tem massa e ocupa espaço. Ela pode existir em diferentes estados físicos, como sólido, líquido e gasoso.</p>
-              <center><a href="Dicionário.html" style="margin-top: 3rem;" class="btn btn-primary">Mais Informações</a></center>
+              <h5 class="card-title"> Base </h5>
+              <p class="card-text"> As bases são substâncias que conseguem aumentar a quantidade de ânions hidróxido, OH-, em solução. </p> <br>
+              <center><a href="Base.html" style="margin-top: 3rem;" class="btn btn-primary">Mais Informações</a></center>
             </div>
           </div>   
           
           <div class="card" id="atom" style="width: 18rem;">
-            <img src="Img/atom-1674878_1280-Photoroom.png" class="card-img-top" alt="...">
+            <img src="Img/atomo-index.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"> Átomos </h5>
               <p class="card-text">Os átomos são as unidades básicas da matéria e a menor parte de um elemento químico que ainda mantém suas propriedades. Cada átomo é composto por três partículas subatômicas principais: prótons, nêutrons e elétrons.</p>
@@ -102,11 +122,11 @@
           </div>   
           
           <div class="card" id="ph" style="width: 18rem;">
-            <img src="Img/atom-1674878_1280-Photoroom.png" class="card-img-top" alt="...">
+            <img src="Img/Catodo.png" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title"> Reação química </h5>
-              <p class="card-text">Uma reação química é um processo no qual uma ou mais substâncias, chamadas de reagentes, se transformam em novas substâncias, chamadas de produtos.</p>
-              <center><a href="Dicionário.html" style="margin-top: 9.8%;" class="btn btn-primary">Mais Informações</a></center>
+              <h5 class="card-title"> Cátodo </h5>
+              <p class="card-text">O cátodo é um dos dois eletrodos em uma célula eletroquímica, sendo o outro o ânodo. Em termos simples, o cátodo é o eletrodo onde ocorre a redução, ou seja, onde os íons ganham elétrons.</p>
+              <center><a href="Cátodo.html" style="margin-top: 9.8%;" class="btn btn-primary">Mais Informações</a></center>
           </div>
         </center>
           
@@ -126,5 +146,11 @@
   </body>
   <script src="JS/indexjs.js"></script>
     
+  <nav class="barInf"><p class="txtbarInfo"> Este site foi feito por alunos da  <a href="https://www.cps.sp.gov.br/etecs/etec-elias-nechar/"><b> Etec Elias Nechar, </b> </a><br> as
+    alguns textos foram retirados de IA, e outros foram de sites como <a href="https://brasilescola.uol.com.br/"> Brasil Escola Uol. </a> <br> <br> 
+    Viu algo com erro? Entre em contato. <br>
+  heitor.cangussu@etec.sp.gov.br <br>  joao.almeida332@etec.sp.gov.br </p>
+  <img src="Img/Eteclogo-Photoroom.png"> <br>
+
   </body>
 </html>
