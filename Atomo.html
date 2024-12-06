@@ -61,30 +61,38 @@
         #body{
           background-color: #0d183a;
         }
-        #JH {
-    background-color: rgb(255, 255, 255);
-    height: 56px;
-
+        .navTP {
+    padding-left: 0.75rem;
+    padding-top: 1rem;
+    width: 100%;
+    background: white;
+    height: 3.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 1.25rem;
+    text-decoration: none;
+    gap: 1rem;
+    display: flex;
 }
 
-#bRes {
-    background-color: rgb(249, 249, 249);
-    height: 5.2rem;
-    display: block;
-    padding-top: 1.2rem;
-}
+@media (max-width: 1000px) {
+    .navTP {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0.5rem;
+        width: 154.2vw; /* Definir a largura como 100% da viewport */
+    }
+    .nav-title {
+        margin-bottom: 0;
+    }
 
-@media (min-width: 991px) {
-    #bRes {
-        display: none;
+    .nav-links {
+        justify-content: flex-end;
     }
 }
 
-@media (max-width: 284px) {
-    #bRes {
-        height: 5.94rem;
-    }
-}
+
         
         
     </style>
@@ -92,54 +100,15 @@
 <body id="body">
 
 </html><style src="index.js"></style>
-<nav class="navbar navbar-expand-lg bg-body-tertiary navig">
-  <div class="container-fluid" id="JH">
-    <a class="navbar-brand" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Terminologia  Química </a>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item"> 
-          <a class="nav-link active" id="menu" aria-current="page" href="index.html"> Menu </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="libr" style="color: rgb(51, 51, 51); cursor: default;" href="Dicionário.html"> Dicionário </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link" href="tabel-periodica.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Tabela Periódica
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Link</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
+<nav class="navTP" >
+  <a id="TMQ"> Terminologia  Química </a> 
+  <a href="index.html" class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Menu </a>
+  <a href="Dicionário.html" class="txts" id="tBP" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(94, 94, 94);"> Dicionário </a>
+  <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(70, 70, 70);"> Tabela Periódica </a>
+  
+  <a class="txts" style="text-decoration: none; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: 1rem; margin-top: 0.05rem; color: rgb(216, 216, 216);"> Desabilitado </a>
+  
 </nav>
-<div id="bRes" >
-  <center>
-  <table>
-    <tr>
-      <div>
-      <button style="background: none; border: none;">  Menu </button>
-      <button style="background: none; border: none;"> <a href="Dicionário.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Dicionário </a></button>
-      <button style="background: none; border: none;"> <a href="tabel-periodica.html" style="text-decoration: none; color: rgb(99, 99, 99);">  Tabela Periódica </a> </button>
-      
-    </div>
-    </tr>
-  </table>
-</center>
-</div>
 
 <h2 id="Lib"> Átomo </h2> 
     <p class="Expl"> O átomo é a partícula fundamental que compõe a matéria. </p>
