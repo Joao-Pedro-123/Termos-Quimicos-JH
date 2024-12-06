@@ -81,7 +81,7 @@
         align-items: center;
         height: auto;
         padding: 0.5rem;
-        width: 154.2vw; /* Definir a largura como 100% da viewport */
+       
     }
     .nav-title {
         margin-bottom: 0;
@@ -92,7 +92,45 @@
     }
 }
 
+.barInf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    flex-wrap: wrap; /* Permitir que os itens se movam para a próxima linha */
+}
 
+.txtbarInfo {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    flex: 1; /* Permitir que o texto ocupe o espaço disponível */
+}
+
+.barInf img {
+    max-width: 150px; /* Ajustar o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-left: 1rem;
+}
+
+/* Media query para telas menores */
+@media (max-width: 600px) {
+    .barInf {
+        flex-direction: column; /* Mudar direção dos itens para coluna */
+        align-items: flex-start; /* Alinhar itens ao início */
+    }
+
+    .barInf img {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+#body{
+  overflow-x: hidden;
+}
         
         
     </style>
@@ -120,7 +158,7 @@
     <p class="Expl"> O átomo é constituído por 1 núcleo e uma eletrosfera. No núcleo estão os prótons e os neutrons, e na eletrosfera estão os elétrons. <br>
       Os prótons tem carga positiva, os neutrons, como o nome indica, são nêutrons. Eles estão localizados no núcleo do átomo, e são menores que ele. E agora os elétrons, que possuem carga negativa e estão localizados na eletrosfera. Veja a representação na imagem abaixo. </p>
 
-    <img src="Img/EstruturaDoAtomo-Photoroom.png" id="EstAtomo">
+    <img src="Img/EstruturaDoAtomo-Photoroom.png" id="EstAtomo" style="transform: scale(0.7); margin-left: -21%;">
 
     <p id="Atp"> Estrutura da Eletrosfera </p>
 
@@ -184,7 +222,7 @@
             Alguns textos foram feitos por IA, e outros foram tirados de sites como <a href="https://mundoeducacao.uol.com.br/"> Mundo Educação </a> e <a href="https://www.todamateria.com.br/"> Toda Matéria </a> <br> <br> 
             Viu algo com erro? Entre em contato. <br>
           heitor.cangussu@etec.sp.gov.br <br>  joao.almeida332@etec.sp.gov.br </p>
-          <img src="Img/Eteclogo-Photoroom.png" style="float: right; margin-top: -224px; margin-right: 6%;"> <br>
+          <img src="Img/Eteclogo-Photoroom.png"> <br>
           
           </nav>
           <div vw class="enabled">
